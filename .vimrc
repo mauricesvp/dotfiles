@@ -22,4 +22,4 @@ set showmatch
 
 " Searching
 set incsearch
-set hlsearch
+" set hlsearch
