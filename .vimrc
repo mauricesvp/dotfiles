@@ -23,3 +23,6 @@ set showmatch
 " Searching
 set incsearch
 " set hlsearch
+
+inoremap kj <esc>
+vnoremap v <esc>
