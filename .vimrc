@@ -1,28 +1,39 @@
 " github.com/mauricesvp/dotfiles 
 
 set nocompatible
-
-colo molokai-maurice
+filetype indent plugin on
 syntax on
 
-" Coding
-set ai
-set tabstop=4
-set softtabstop=4
-set shiftwidth=4
-set expandtab
-set tw=100
+colo molokai-maurice
 
-" UI
-set number
-set showcmd
+set hidden
+set confirm
 set wildmenu
-set lazyredraw
-set showmatch
+set showcmd
+set showmode
 
-" Searching
+set nomodeline
+set ttyfast
+set history=1000
+
+set laststatus=2
+
+set number
+
+set nostartofline
+set backspace=indent,eol,start
+
+set ignorecase
+set smartcase
 set incsearch
-" set hlsearch
+set hlsearch
+
+set ai
+set tw=100
+set shiftwidth=4
+set softtabstop=4
+set expandtab
 
 inoremap kj <esc>
 vnoremap v <esc>
+nnoremap ; :
