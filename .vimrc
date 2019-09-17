@@ -18,7 +18,7 @@ set number
 set showcmd
 set wildmenu
 set lazyredraw
-set showmatch
+" set showmatch
 
 " Searching
 set incsearch
