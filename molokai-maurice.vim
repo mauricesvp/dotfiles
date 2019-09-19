@@ -35,6 +35,7 @@ hi Exception       ctermfg=154               cterm=bold
 hi Float           ctermfg=141
 hi Function        ctermfg=154
 hi Identifier      ctermfg=208
+hi MatchParen cterm=bold ctermbg=none ctermfg=magenta
 
 hi Keyword         ctermfg=197               cterm=bold
 hi Operator        ctermfg=197
