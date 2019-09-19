@@ -43,6 +43,7 @@ hi PreCondit       ctermfg=201               cterm=bold
 hi PreProc         ctermfg=201
 hi Repeat          ctermfg=197               cterm=bold
 
+hi SpecialKey      ctermfg=239
 hi Statement       ctermfg=197               cterm=bold
 hi Tag             ctermfg=197
 hi Title           ctermfg=203

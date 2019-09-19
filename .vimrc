@@ -1,6 +1,19 @@
 " github.com/mauricesvp/dotfiles 
 
 set nocompatible
+
+" Vundle
+filetype off
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+Plugin 'VundleVim/Vundle.vim'
+
+Plugin 'scrooloose/syntastic'
+
+call vundle#end()
+
+" General
 filetype indent plugin on
 syntax on
 
@@ -34,6 +47,16 @@ set shiftwidth=4
 set softtabstop=4
 set expandtab
 
+set listchars=tab:>·,trail:~,extends:>,precedes:<,space:·
+set list
+
+" Syntastic
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_check_on_wq = 1
+let g:syntastic_python_checkers = ['python', 'pep8']
+let g:syntastic_python_python_exec = 'python3'
+
+" Bindings
 inoremap kj <esc>
 vnoremap v <esc>
 nnoremap ; :
