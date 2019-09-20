@@ -10,6 +10,7 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'scrooloose/syntastic'
+Plugin 'tpope/vim-obsession'
 
 call vundle#end()
 
@@ -55,6 +56,7 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_check_on_wq = 1
 let g:syntastic_python_checkers = ['python', 'pep8']
 let g:syntastic_python_python_exec = 'python3'
+let g:syntastic_python_pep8_post_args="--max-line-length=120"
 
 " Bindings
 inoremap kj <esc>
