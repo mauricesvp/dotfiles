@@ -10,7 +10,7 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'scrooloose/syntastic'
-Plugin 'tpope/vim-obsession'
+Plugin 'AutoClose'
 
 call vundle#end()
 
@@ -59,6 +59,23 @@ let g:syntastic_python_python_exec = 'python3'
 let g:syntastic_python_pep8_post_args="--max-line-length=120"
 
 " Bindings
+let mapleader = ","
+
+nnoremap <leader>s :w<cr>
+nnoremap <leader>t <c-w><c-w>
+nnoremap <leader><space> :noh<cr>
+nnoremap <leader>r :%s/
+" vimrc
+nmap <silent> <leader>Qe :e $MYVIMRC<CR>
+nmap <silent> <leader>Qs :so $MYVIMRC<CR>
+" splitting
+nnoremap <leader>v <C-w>v<C-w>l
+nnoremap <leader>h :sp<cr>
+
+nnoremap j gj
+nnoremap k gk
+
 inoremap kj <esc>
 vnoremap v <esc>
+
 nnoremap ; :
