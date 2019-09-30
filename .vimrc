@@ -71,6 +71,7 @@ nmap <silent> <leader>Qs :so $MYVIMRC<CR>
 " splitting
 nnoremap <leader>v <C-w>v<C-w>l
 nnoremap <leader>h :sp<cr>
+nnoremap <leader>p :!python3 main.py<cr>
 
 nnoremap j gj
 nnoremap k gk
