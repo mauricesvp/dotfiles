@@ -10,7 +10,7 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'scrooloose/syntastic'
-Plugin 'AutoClose'
+" Plugin 'AutoClose' " produces bug with arrow keys inside tmux
 
 call vundle#end()
 
@@ -48,7 +48,7 @@ set shiftwidth=4
 set softtabstop=4
 set expandtab
 
-set listchars=tab:>·,trail:~,extends:>,precedes:<,space:·
+set listchars=tab:>·,trail:~,extends:>,precedes:<
 set list
 
 " Syntastic
