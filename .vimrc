@@ -3,22 +3,29 @@
 set nocompatible
 
 " Vundle
-filetype off
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+"filetype off
+"set rtp+=~/.vim/bundle/Vundle.vim
+"call vundle#begin()
 
-Plugin 'VundleVim/Vundle.vim'
+"Plugin 'VundleVim/Vundle.vim'
 
-Plugin 'scrooloose/syntastic'
+"Plugin 'scrooloose/syntastic'
 " Plugin 'AutoClose' " produces bug with arrow keys inside tmux
 
-call vundle#end()
+"call vundle#end()
 
 " General
 filetype indent plugin on
 syntax on
 
-colo molokai-maurice
+" colo molokai-maurice
+colo gruvbox8
+
+" Regarding gruvbox
+set bg=dark
+
+set cursorline
+hi CursorLine cterm=none ctermbg=237 ctermfg=None
 
 set hidden
 set confirm
@@ -62,6 +69,7 @@ let g:syntastic_python_pep8_post_args="--max-line-length=120"
 let mapleader = ","
 
 nnoremap <leader>s :w<cr>
+nnoremap <leader>x :x<cr>
 nnoremap <leader>t <c-w><c-w>
 nnoremap <leader><space> :noh<cr>
 nnoremap <leader>r :%s/
@@ -71,6 +79,9 @@ nmap <silent> <leader>Qs :so $MYVIMRC<CR>
 " splitting
 nnoremap <leader>v <C-w>v<C-w>l
 nnoremap <leader>h :sp<cr>
+nnoremap <leader>m <C-W>_
+nnoremap <leader>M <C-W>=
+
 nnoremap <leader>P :!python3 main.py<cr>
 nnoremap <leader>p :!python3 %<cr>
 
