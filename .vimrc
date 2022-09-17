@@ -1,4 +1,4 @@
-" github.com/mauricesvp/dotfiles 
+" github.com/mauricesvp/dotfiles
 
 set nocompatible
 
