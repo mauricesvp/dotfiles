@@ -1,6 +1,6 @@
 #!/bin/sh
 apt-get update -y && apt-get upgrade -y
-apt-get install git curl wget zsh
+apt-get install -y git curl tmux wget zsh
 
 ssh-keygen -t rsa -N "" -f ~/.ssh/id_rsa
 
