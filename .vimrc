@@ -3,16 +3,17 @@
 set nocompatible
 
 " Vundle
-"filetype off
-"set rtp+=~/.vim/bundle/Vundle.vim
-"call vundle#begin()
+filetype off
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
-"Plugin 'VundleVim/Vundle.vim'
+Plugin 'VundleVim/Vundle.vim'
 
+Plugin 'github/copilot.vim'
 "Plugin 'scrooloose/syntastic'
-" Plugin 'AutoClose' " produces bug with arrow keys inside tmux
+"Plugin 'AutoClose' " produces bug with arrow keys inside tmux
 
-"call vundle#end()
+call vundle#end()
 
 " General
 filetype indent plugin on
