@@ -6,10 +6,16 @@ set nocompatible
 filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
-
 Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'github/copilot.vim'
+
+Plugin 'tpope/vim-fugitive'
+
+Plugin 'preservim/nerdtree'
+Plugin 'Xuyuanp/nerdtree-git-plugin'
+Plugin 'PhilRunninger/nerdtree-visual-selection'
+
 "Plugin 'scrooloose/syntastic'
 "Plugin 'AutoClose' " produces bug with arrow keys inside tmux
 
@@ -51,7 +57,7 @@ set incsearch
 set hlsearch
 
 set ai
-set tw=100
+set tw=120
 set shiftwidth=4
 set softtabstop=4
 set expandtab
@@ -82,9 +88,15 @@ nnoremap <leader>v <C-w>v<C-w>l
 nnoremap <leader>h :sp<cr>
 nnoremap <leader>m <C-W>_
 nnoremap <leader>M <C-W>=
+" NERDTree
+nnoremap <leader>n :NERDTree<cr>
+nnoremap <leader>f :NERDTreeToggle<cr>
+nnoremap <C-n> :NERDTreeFocus<cr>
 
-nnoremap <leader>P :!python3 main.py<cr>
-nnoremap <leader>p :!python3 %<cr>
+autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
+
+" nnoremap <leader>P :!python3 main.py<cr>
+" nnoremap <leader>p :!python3 %<cr>
 
 nnoremap j gj
 nnoremap k gk
