@@ -6,18 +6,24 @@ set nocompatible
 filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
-Plugin 'VundleVim/Vundle.vim'
 
+Plugin 'VundleVim/Vundle.vim'
 Plugin 'github/copilot.vim'
 
 Plugin 'tpope/vim-fugitive'
+
+Plugin 'ycm-core/YouCompleteMe', { 'do': 'python3 install.py' }
+
+Plugin 'vim-scripts/indentpython.vim'
+
+Plugin 'sheerun/vim-polyglot'
 
 Plugin 'preservim/nerdtree'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'PhilRunninger/nerdtree-visual-selection'
 
-"Plugin 'scrooloose/syntastic'
-"Plugin 'AutoClose' " produces bug with arrow keys inside tmux
+" Plugin 'scrooloose/syntastic'
+" Plugin 'AutoClose' " produces bug with arrow keys inside tmux
 
 call vundle#end()
 
@@ -64,6 +70,10 @@ set expandtab
 
 set listchars=tab:>·,trail:~,extends:>,precedes:<
 set list
+
+" ycm
+let g:ycm_key_list_select_completion = ['<c-n>', '<Down>']
+let g:ycm_auto_hover = ''
 
 " Syntastic
 let g:syntastic_always_populate_loc_list = 1
