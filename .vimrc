@@ -11,8 +11,10 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'github/copilot.vim'
 
 Plugin 'tpope/vim-fugitive'
+" Plugin 'airblade/vim-gitgutter'  " Installed as pack
 
 Plugin 'ycm-core/YouCompleteMe', { 'do': 'python3 install.py' }
+Plugin 'psf/black'
 
 Plugin 'vim-scripts/indentpython.vim'
 
@@ -81,6 +83,16 @@ let g:syntastic_check_on_wq = 1
 let g:syntastic_python_checkers = ['python', 'pep8']
 let g:syntastic_python_python_exec = 'python3'
 let g:syntastic_python_pep8_post_args="--max-line-length=120"
+
+" Black
+" augroup black_on_save
+" autocmd!
+" autocmd BufWritePre *.py Black
+" augroup end
+let g:black_linelength = 120
+let g:black_preview = 1
+let g:black_target_version = "py310"
+autocmd FileType python nnoremap <buffer> <leader>b :Black<CR>
 
 " Bindings
 let mapleader = ","
