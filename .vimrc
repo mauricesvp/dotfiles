@@ -73,9 +73,13 @@ set expandtab
 set listchars=tab:>·,trail:~,extends:>,precedes:<
 set list
 
+" Bindings
+let mapleader = ","
+
 " ycm
 let g:ycm_key_list_select_completion = ['<c-n>', '<Down>']
 let g:ycm_auto_hover = ''
+nnoremap <leader>g :YcmCompleter GoTo<CR>
 
 " Syntastic
 let g:syntastic_always_populate_loc_list = 1
@@ -93,9 +97,6 @@ let g:black_linelength = 120
 let g:black_preview = 1
 let g:black_target_version = "py310"
 autocmd FileType python nnoremap <buffer> <leader>b :Black<CR>
-
-" Bindings
-let mapleader = ","
 
 nnoremap <leader>s :w<cr>
 nnoremap <leader>x :x<cr>
