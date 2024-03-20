@@ -124,6 +124,11 @@ autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTr
 nnoremap j gj
 nnoremap k gk
 
+nmap <C-j> ]m
+nmap <C-k> [m
+
+nmap gg ggzz
+
 inoremap kj <esc>
 vnoremap v <esc>
 
