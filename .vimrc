@@ -15,10 +15,12 @@ Plugin 'tpope/vim-fugitive'
 
 Plugin 'ycm-core/YouCompleteMe', { 'do': 'python3 install.py' }
 Plugin 'psf/black'
+Plugin 'heavenshell/vim-pydocstring', { 'do': 'make install', 'for': 'python' }
 
 Plugin 'vim-scripts/indentpython.vim'
 
 Plugin 'sheerun/vim-polyglot'
+Plugin 'chrisbra/csv.vim'
 
 Plugin 'preservim/nerdtree'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
@@ -80,6 +82,7 @@ let mapleader = ","
 let g:ycm_key_list_select_completion = ['<c-n>', '<Down>']
 let g:ycm_auto_hover = ''
 nnoremap <leader>g :YcmCompleter GoTo<CR>
+set completeopt-=preview
 
 " Syntastic
 let g:syntastic_always_populate_loc_list = 1
@@ -93,10 +96,13 @@ let g:syntastic_python_pep8_post_args="--max-line-length=120"
 " autocmd!
 " autocmd BufWritePre *.py Black
 " augroup end
-let g:black_linelength = 120
+let g:black_linelength = 130
 let g:black_preview = 1
 let g:black_target_version = "py310"
 autocmd FileType python nnoremap <buffer> <leader>b :Black<CR>
+
+let g:pydocstring_doq_path = '~/.local/bin/doq'
+let g:pydocstring_formatter = 'google'
 
 nnoremap <leader>s :w<cr>
 nnoremap <leader>x :x<cr>
